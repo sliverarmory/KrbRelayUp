@@ -1,0 +1,26 @@
+{
+    "name": "KrbRelayUp",
+    "version": "0.0.0",
+    "command_name": "krbrelayup",
+    "original_author": "@Dec0ne",
+    "repo_url": "https://github.com/sliverarmory/KrbRelayUp",
+    "help": "A universal no-fix local privilege escalation in windows domain environments where LDAP signing is not enforced (the default settings).",
+
+    "entrypoint": "Main",
+    "allow_args": true,
+    "default_args": "",
+    "is_reflective": false,
+    "is_assembly": true,
+    "files": [
+        {
+            "os": "windows",
+            "arch": "amd64",
+            "path": "KrbRelayUp.exe"
+        },
+        {
+            "os": "windows",
+            "arch": "386",
+            "path": "KrbRelayUp.exe"
+        }
+    ]
+}
