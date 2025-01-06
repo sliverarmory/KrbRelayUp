@@ -37,8 +37,7 @@ jobs:
     - name: Build Package
       run: |
         $Version = git.exe describe --tags --abbrev=0
-        $Version = "`"$Version`""
-        Get-Content -Path alias.json | .\jq.exe ".version |= `"$Version`"" > ./compiled/alias.json
+        Get-Content -Path alias.json | .\jq.exe --arg ver "$Version" '.version |= $ver' > ./compiled/alias.json
         cd compiled
         ls
         tar.exe -czvf ..\krbrelayup.tar.gz .
